@@ -17,13 +17,13 @@ public class WeatherController {
     WeatherService weatherService;
 
     // call Example
-    // http://localhost:8080/weather/seoul
-    // http://localhost:8080/weather/london
+    // http://localhost:8080/weather/seoul/{apiKey}
+    // http://localhost:8080/weather/london/{apiKey}
     // Calls per minute (Maximum 60, no more than)
-    @RequestMapping(value="/{city}", method= RequestMethod.GET)
-    public String getCurrentWeather(Model model, @PathVariable String city) throws Exception {
+    @RequestMapping(value="/{city}/{apiKey}", method= RequestMethod.GET)
+    public String getCurrentWeather(Model model, @PathVariable String city, @PathVariable String apiKey) throws Exception {
 
-        CurrentWeatherModel currentWeatherModel = weatherService.getWeather(city);
+        CurrentWeatherModel currentWeatherModel = weatherService.getWeather(city, apiKey);
 
         model.addAttribute("cityName", city);
         model.addAttribute("weatherModel", currentWeatherModel);
