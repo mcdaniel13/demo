@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/data/jaxb">
+<head>
+    <meta charset="UTF-8" />
+</head>
+<body>
+도시명 : <span th:text="${cityName}" /><br />
+<br />
+주요 날씨 : <span th:text="${weatherModel.weather[0].main}" /><br />
+상세 설명 : <span th:text="${weatherModel.weather[0].description}" /><br />
+<br />
+현재 온도 : <span th:text="${weatherModel.main.temp}" /><br />
+최저 온도 : <span th:text="${weatherModel.main.temp_min}" /><br />
+최대 온도 : <span th:text="${weatherModel.main.temp_max}" /><br />
+습도:  <span th:text="${weatherModel.main.humidity}" /><br />
+<br />
+풍속 : <span th:text="${weatherModel.wind.speed}" /><br />
+<br />
+국가코드 : <span th:text="${weatherModel.sys.country}" /><br />
+<br />
+</body>
+</html>
