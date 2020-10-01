@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" >
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <table border=1>
+        <tr>
+            <td>no</td>
+            <td>
+                <input type="number" th:field="${userModel.no}">
+            </td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>
+                <input type="text" th:field="${userModel.name}">
+            </td>
+        </tr>
+        <tr>
+            <td>age</td>
+            <td>
+                <input type="number" th:field="${userModel.age}">
+            </td>
+        </tr>
+        <tr>
+            <td>sex</td>
+            <td>
+                <input type="text" th:field="${userModel.sex}">
+            </td>
+        </tr>
+    </table>
+    <button type="submit" >입력</button>
+</form>
+</body>
+</html>

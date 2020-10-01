@@ -12,10 +12,10 @@ public class TempService {
     TempDao tempDao;
 
     public UserModel findUser(String no) {
-
         return tempDao.findUser(no);
     }
 
-
-
+    public void insertUser(UserModel userModel) {
+        tempDao.insertUser(userModel);
+    }
 }

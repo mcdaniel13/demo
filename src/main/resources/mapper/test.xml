@@ -6,4 +6,9 @@
         FROM user
         WHERE no = #{no}
     </select>
+    <insert id="insertUser">
+        INSERT
+        INTO user (no, name, age, sex)
+        VALUES (#{no}, #{name}, #{age}, #{sex})
+    </insert>
 </mapper>

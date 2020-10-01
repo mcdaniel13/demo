@@ -6,4 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface TempDao {
     UserModel findUser(String no);
+    void insertUser(UserModel userModel);
 }

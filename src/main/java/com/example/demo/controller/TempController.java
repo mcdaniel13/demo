@@ -33,9 +33,20 @@ public class TempController {
     public String findUser(Model model, @PathVariable String no) throws Exception {
 
         UserModel userModel = tempService.findUser(no);
-
         model.addAttribute("userModel", userModel);
 
         return "index2";
+    }
+
+    @RequestMapping(value="/insertUser", method=RequestMethod.GET)
+    public String insertUser(Model model, UserModel userModel) throws Exception {
+        model.addAttribute("userModel", userModel);
+        return "index3";
+    }
+
+    @RequestMapping(value="/insertUser", method=RequestMethod.POST)
+    public String insertUserSubmit(Model model, UserModel userModel) throws Exception {
+        tempService.insertUser(userModel);
+        return "redirect:/findUser/" + Integer.toString(userModel.getNo());
     }
 }
