@@ -1,64 +1,57 @@
 package com.example.demo.model;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CurrentCovidModel {
-    List<CovidStatus> covidStatus;
+    @JsonProperty("Lat")
+    private String Lat;
+    @JsonProperty("Lon")
+    private String Lon;
+    @JsonProperty("Cases")
+    private String Cases;
+    @JsonProperty("Status")
+    private String Status;
+    @JsonProperty("Date")
+    private String Date;
 
-    public List<CovidStatus> getCovidStatus() {
-        return covidStatus;
+    public String getLat() {
+        return Lat;
     }
 
-    public void setCovidStatus(List<CovidStatus> mCovidStatus) {
-        this.covidStatus = mCovidStatus;
+    public void setLat(String lat) {
+        Lat = lat;
     }
 
-    public static class CovidStatus {
-        private String Lat;
-        private String Lon;
-        private String Cases;
-        private String Status;
-        private String Date;
+    public String getLon() {
+        return Lon;
+    }
 
-        public String getLon() {
-            return Lon;
-        }
+    public void setLon(String lon) {
+        Lon = lon;
+    }
 
-        public void setLon(String lon) {
-            Lon = lon;
-        }
+    public String getCases() {
+        return Cases;
+    }
 
-        public String getCases() {
-            return Cases;
-        }
+    public void setCases(String cases) {
+        Cases = cases;
+    }
 
-        public void setCases(String cases) {
-            Cases = cases;
-        }
+    public String getStatus() {
+        return Status;
+    }
 
-        public String getStatus() {
-            return Status;
-        }
+    public void setStatus(String status) {
+        Status = status;
+    }
 
-        public void setStatus(String status) {
-            Status = status;
-        }
+    public String getDate() {
+        return Date;
+    }
 
-        public String getDate() {
-            return Date;
-        }
-
-        public void setDate(String date) {
-            Date = date;
-        }
-
-        public String getLat() {
-            return Lat;
-        }
-
-        public void setLat(String lat) {
-            Lat = lat;
-        }
+    public void setDate(String date) {
+        Date = date;
     }
 }
 /*
