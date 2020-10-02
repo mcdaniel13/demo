@@ -11,7 +11,7 @@ public class WeatherService {
     @Autowired
     WeatherRepository weatherRepository;
 
-    public CurrentWeatherModel getWeather(String city) {
-        return weatherRepository.getWeather(city);
+    public CurrentWeatherModel getWeather(String city, String apiKey) {
+        return weatherRepository.getWeather(city, apiKey);
     }
 }

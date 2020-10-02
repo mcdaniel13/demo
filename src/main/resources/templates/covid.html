@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Country : <span th:text="${countryName}"></span>
+    <table id="covidTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Confirmed</th>
+                <th>Deaths</th>
+                <th>Recovered</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr th:each="CurrentCovidModel : ${currentCovidModelList}">
+            <td th:text="${CurrentCovidModel.mDate}"></td>
+            <td th:text="${CurrentCovidModel.mConfirmed}"></td>
+            <td th:text="${CurrentCovidModel.mDeaths}"></td>
+            <td th:text="${CurrentCovidModel.mRecovered}"></td>
+            <td th:text="${CurrentCovidModel.mActive}"></td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
