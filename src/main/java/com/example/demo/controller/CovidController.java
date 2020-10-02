@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.List;
+
 @Controller
 @RequestMapping(value = "/covid")
 public class CovidController {
@@ -18,10 +20,10 @@ public class CovidController {
 
     @RequestMapping(value="/{country}", method= RequestMethod.GET)
     public String getCityCovidStatus(Model model, @PathVariable String country) {
-        CurrentCovidModel currentCovidModel = mCovidService.getCountryCovid(country);
+        List<CurrentCovidModel> currentCovidModelList = mCovidService.getCountryCovid(country);
 
         model.addAttribute("countryName", country);
-        model.addAttribute("covidModel", currentCovidModel);
+        model.addAttribute("currentCovidModelList", currentCovidModelList);
 
         return "covid";
     }

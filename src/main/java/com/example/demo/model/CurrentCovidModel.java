@@ -1,65 +1,80 @@
 package com.example.demo.model;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CurrentCovidModel {
-    List<CovidStatus> covidStatus;
+    @JsonProperty("Lat")
+    private String mLat;
+    @JsonProperty("Lon")
+    private String mLon;
+    @JsonProperty("Confirmed")
+    private String mConfirmed;
+    @JsonProperty("Deaths")
+    private String mDeaths;
+    @JsonProperty("Recovered")
+    private String mRecovered;
+    @JsonProperty("Active")
+    private String mActive;
+    @JsonProperty("Date")
+    private String mDate;
 
-    public List<CovidStatus> getCovidStatus() {
-        return covidStatus;
+    public String getmLat() {
+        return mLat;
     }
 
-    public void setCovidStatus(List<CovidStatus> mCovidStatus) {
-        this.covidStatus = mCovidStatus;
+    public void setmLat(String mLat) {
+        this.mLat = mLat;
     }
 
-    public static class CovidStatus {
-        private String Lat;
-        private String Lon;
-        private String Cases;
-        private String Status;
-        private String Date;
-
-        public String getLon() {
-            return Lon;
-        }
-
-        public void setLon(String lon) {
-            Lon = lon;
-        }
-
-        public String getCases() {
-            return Cases;
-        }
-
-        public void setCases(String cases) {
-            Cases = cases;
-        }
-
-        public String getStatus() {
-            return Status;
-        }
-
-        public void setStatus(String status) {
-            Status = status;
-        }
-
-        public String getDate() {
-            return Date;
-        }
-
-        public void setDate(String date) {
-            Date = date;
-        }
-
-        public String getLat() {
-            return Lat;
-        }
-
-        public void setLat(String lat) {
-            Lat = lat;
-        }
+    public String getmLon() {
+        return mLon;
     }
+
+    public void setmLon(String mLon) {
+        this.mLon = mLon;
+    }
+
+    public String getmConfirmed() {
+        return mConfirmed;
+    }
+
+    public void setmConfirmed(String mConfirmed) {
+        this.mConfirmed = mConfirmed;
+    }
+
+    public String getmDeaths() {
+        return mDeaths;
+    }
+
+    public void setmDeaths(String mDeaths) {
+        this.mDeaths = mDeaths;
+    }
+
+    public String getmRecovered() {
+        return mRecovered;
+    }
+
+    public void setmRecovered(String mRecovered) {
+        this.mRecovered = mRecovered;
+    }
+
+    public String getmActive() {
+        return mActive;
+    }
+
+    public void setmActive(String mActive) {
+        this.mActive = mActive;
+    }
+
+    public String getmDate() {
+        return mDate;
+    }
+
+    public void setmDate(String mDate) {
+        this.mDate = mDate;
+    }
+
+
 }
 /*
   {
